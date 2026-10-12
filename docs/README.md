@@ -3,20 +3,23 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and project title
-repository-name: eYY-3yp-project-template
-title: Project Template
+repository-name: e22-3yp-NETH
+title: NETH
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# NETH - Networked Ecological Telemetry Hub
+
+An intelligent, low-power wildlife monitoring system integrating embedded computing, motion-triggered image capture, environmental sensing, and real-time device health monitoring. Designed for remote ecological observation, NETH combines camera-trap technology with synchronized sensor data and local storage, with planned extensions for Edge AI wildlife classification and long-range LoRa communication across distributed monitoring nodes.
 
 ---
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/22/151, Imaadh Ifthikar, [email](mailto:e22151@eng.pdn.ac.lk)
+-  E/22/184, Bhagya Karunanayake, [email](mailto:e22184@eng.pdn.ac.lk)
+-  E/22/214, Didulana Lokugamage, [email](mailto:e22214@eng.pdn.ac.lk)
+-  E/22/056, Daniru Chandrawansha, [email](mailto:e22056@eng.pdn.ac.lk)
 
 <!-- Image (photo/drawing of the final hardware) should be here -->
 
