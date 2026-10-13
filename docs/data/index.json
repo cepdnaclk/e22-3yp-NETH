@@ -29,4 +29,6 @@
         }
     ],
     "tags": ["Web", "Embedded Systems", "IoT"]
+    "image": "cover_page.jpg",
+    "thumbnail": "thumbnail.jpg"
 }
