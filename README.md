@@ -123,7 +123,7 @@ The prototype will be evaluated using measurable engineering criteria.
 
 ## 🗺️ Development Roadmap
 
-- [ ] **Phase 1:** Research, requirements, and system architecture
+- [x] **Phase 1:** Research, requirements, and system architecture
 - [ ] **Phase 2:** Camera and PIR sensor integration
 - [ ] **Phase 3:** Local image storage and timestamping
 - [ ] **Phase 4:** Environmental and battery monitoring
