@@ -1,5 +1,5 @@
-{    
-    "title": "NETH - Networked Ecological Telemetry Hub"
+{
+    "title": "NETH - Networked Ecological Telemetry Hub",
     "team": [
         {
             "name": "Bhagya Karunanayake",
@@ -28,7 +28,12 @@
             "email": "yasodhav@eng.pdn.ac.lk"
         }
     ],
-    "tags": ["Web", "Embedded Systems", "IoT"]
+    "tags": [
+        "Web",
+        "Embedded Systems",
+        "Networking",
+        "IoT"
+    ],
     "image": "cover_page.jpg",
     "thumbnail": "thumbnail.jpg"
 }
