@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- Replace with your NETH logo -->
-  <img src="assets/neth-logo.png" alt="NETH Logo" width="150"/>
+  <img src="assets/neth-logo.png" alt="NETH Logo" width="90"/>
 
   <h1>NETH | NETWORKED ECOLOGICAL TELEMETRY HUB</h1>
 
