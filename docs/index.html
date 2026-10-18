@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NETH | Networked Ecological Telemetry Hub</title>
+  <meta name="description" content="Intelligent Wildlife Monitoring & Smarter Conservation through low-power cyber-physical systems." />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/neth-logo.png" type="image/x-icon" />
+
+  <!-- RemixIcon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Google Fonts: Poppins & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">
+        <img src="assets/images/neth-logo.png" alt="NETH Logo" class="nav__logo-img" />
+        <span>NETH</span>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#architecture" class="nav__link">Solution Architecture</a>
+          </li>
+          <li class="nav__item">
+            <a href="#design" class="nav__link">Hardware & Software</a>
+          </li>
+          <li class="nav__item">
+            <a href="#testing" class="nav__link">Testing</a>
+          </li>
+          <li class="nav__item">
+            <a href="#blog" class="nav__link">Blog</a>
+          </li>
+          <li class="nav__item">
+            <a href="#how-to-use" class="nav__link">How to Use</a>
+          </li>
+          <li class="nav__item">
+            <a href="#team" class="nav__link">Team</a>
+          </li>
+          <li class="nav__item">
+            <a href="#budget" class="nav__link">Budget</a>
+          </li>
+        </ul>
+
+        <!-- Close Mobile Menu -->
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+      </div>
+
+      <div class="nav__btns">
+        <!-- Theme Change Button -->
+        <i class="ri-moon-line change-theme" id="theme-button" title="Toggle Light/Dark Theme"></i>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- ==================== 1. HOME SECTION ==================== -->
+    <section class="home" id="home">
+      <div class="home__container container">
+        <div class="home__data">
+          <span class="home__badge">
+            <i class="ri-leaf-line"></i> Cyber-Physical Systems Project (CO3060)
+          </span>
+
+          <h1 class="home__title">
+            Intelligent Wildlife Monitoring.<br />
+            <span class="gradient-text">Smarter Conservation.</span>
+          </h1>
+
+          <p class="home__description">
+            <strong>NETH (Networked Ecological Telemetry Hub)</strong> is a low-power cyber-physical system integrating motion-triggered camera capture, synchronized micro-climatic sensing, and edge telemetry for remote ecological observation.
+          </p>
+
+          <div class="home__buttons">
+            <a href="#about" class="button">
+              Explore Project <i class="ri-arrow-right-line"></i>
+            </a>
+            <a href="#architecture" class="button button--secondary">
+              System Architecture <i class="ri-node-tree"></i>
+            </a>
+          </div>
+
+          <div class="home__manuals">
+            <a href="https://github.com/cepdnaclk/e22-3yp-NETH" target="_blank" rel="noopener noreferrer" class="manual">
+              <i class="ri-github-fill"></i> GitHub Repository
+            </a>
+            <a href="#how-to-use" class="manual">
+              <i class="ri-book-2-line"></i> Deployment Guide
+            </a>
+            <a href="http://www.ce.pdn.ac.lk/" target="_blank" rel="noopener noreferrer" class="manual">
+              <i class="ri-building-line"></i> Dept. of Computer Engineering
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Highlights Bar -->
+      <div class="container">
+        <div class="home__highlights grid">
+          <div class="highlight__card">
+            <div class="highlight__icon">
+              <i class="ri-flashlight-line"></i>
+            </div>
+            <div>
+              <div class="highlight__title">Ultra-Low Power</div>
+              <div class="highlight__subtitle">Deep-Sleep Cycles (&lt; 50µA)</div>
+            </div>
+          </div>
+
+          <div class="highlight__card">
+            <div class="highlight__icon">
+              <i class="ri-camera-lens-line"></i>
+            </div>
+            <div>
+              <div class="highlight__title">PIR Motion Capture</div>
+              <div class="highlight__subtitle">Sub-Second Trigger Response</div>
+            </div>
+          </div>
+
+          <div class="highlight__card">
+            <div class="highlight__icon">
+              <i class="ri-temp-hot-line"></i>
+            </div>
+            <div>
+              <div class="highlight__title">Dual Sensing</div>
+              <div class="highlight__subtitle">Temp & Humidity Telemetry</div>
+            </div>
+          </div>
+
+          <div class="highlight__card">
+            <div class="highlight__icon">
+              <i class="ri-broadcast-line"></i>
+            </div>
+            <div>
+              <div class="highlight__title">LoRa Ready</div>
+              <div class="highlight__subtitle">Long-Range Hub Broadcast</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. ABOUT SECTION ==================== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">Project Foundation</span>
+          <h2 class="section__title">About NETH</h2>
+        </div>
+
+        <div class="about__container grid" style="margin-bottom: 3.5rem;">
+          <div class="about__img-wrapper">
+            <img src="data/thumbnail.jpg" alt="Wildlife Observation in Nature" class="about__img" />
+          </div>
+
+          <div class="about__data">
+            <h3 class="about__title">Bridging Camera Traps and Real-Time Ecological Context</h3>
+            <p class="about__description">
+              Wildlife conservation depends on continuous, accurate observation of animal activities in natural habitats. Standard camera traps can photograph wildlife, but manual data collection in remote wilderness areas is labor-intensive and hazardous. Furthermore, traditional cameras lack synchronized environmental measurements and device health telemetry.
+            </p>
+            <p class="about__description">
+              <strong>NETH</strong> solves this by creating an autonomous, intelligent monitoring node that couples PIR motion detection with high-speed camera acquisition, ambient temperature, relative humidity, and battery health telemetry.
+            </p>
+
+            <div class="about__points">
+              <div class="about__point">
+                <i class="ri-checkbox-circle-fill"></i>
+                <span>Automated capture with zero disturbance to natural wildlife corridors.</span>
+              </div>
+              <div class="about__point">
+                <i class="ri-checkbox-circle-fill"></i>
+                <span>Precise correlation between animal sightings and micro-climate fluctuations.</span>
+              </div>
+              <div class="about__point">
+                <i class="ri-checkbox-circle-fill"></i>
+                <span>Remote device health reporting preventing unrecorded downtime.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="section__title-center">
+          <span class="section__subtitle">Capabilities</span>
+          <h3 class="section__title">Key System Features</h3>
+        </div>
+
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div class="card">
+            <div class="card__icon">
+              <i class="ri-focus-3-line"></i>
+            </div>
+            <h4 class="card__title">Intelligent Image Capture</h4>
+            <p class="card__description">
+              Fast hardware wake-up triggers high-resolution image recording upon animal motion detection while suppressing false foliage triggers.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <i class="ri-database-2-line"></i>
+            </div>
+            <h4 class="card__title">Synchronized Metadata</h4>
+            <p class="card__description">
+              Every captured frame is matched with millisecond timestamps, ambient temperature, relative humidity, battery level, and node ID.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <i class="ri-battery-charge-line"></i>
+            </div>
+            <h4 class="card__title">Low-Power Endurance</h4>
+            <p class="card__description">
+              Optimized deep-sleep current budgeting combined with solar charging ensures continuous, unattended operation across changing seasons.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <i class="ri-sd-card-line"></i>
+            </div>
+            <h4 class="card__title">Local Resilient Storage</h4>
+            <p class="card__description">
+              Industrial FAT32 file system journaling protects images and telemetry logs even during sudden voltage dips or weather disruptions.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <i class="ri-cpu-line"></i>
+            </div>
+            <h4 class="card__title">Edge AI Classification</h4>
+            <p class="card__description">
+              Planned TinyML inference pipeline to filter empty frames and categorize wildlife species directly on the edge node.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <i class="ri-signal-tower-line"></i>
+            </div>
+            <h4 class="card__title">Long-Range LoRa Hub</h4>
+            <p class="card__description">
+              Sub-GHz LoRa RF telemetry transmits detection digests and node health heartbeats across multi-kilometer wilderness expanses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. SOLUTION ARCHITECTURE ==================== -->
+    <section class="section" id="architecture" style="background-color: var(--body-color);">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">System Blueprint</span>
+          <h2 class="section__title">Solution Architecture</h2>
+        </div>
+        <p class="section__description">
+          A layered cyber-physical architecture engineered for ultra-low power consumption, deterministic sensing, and long-range telemetry.
+        </p>
+
+        <div class="architecture__container grid">
+          <div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Core Operational Workflow</h3>
+            <p style="margin-bottom: 1.5rem; font-size: var(--small-font-size);">
+              When an animal enters the node's surveillance zone, a low-latency hardware interrupt triggers the telemetry sequence:
+            </p>
+
+            <div class="workflow__steps">
+              <div class="workflow__step">
+                <div class="workflow__step-num">1</div>
+                <div class="workflow__step-content">
+                  <h4>Motion Detection & Wake-Up</h4>
+                  <p>PIR sensor detects displacement in infrared radiation, instantly generating a hardware interrupt to wake the MCU from deep sleep.</p>
+                </div>
+              </div>
+
+              <div class="workflow__step">
+                <div class="workflow__step-num">2</div>
+                <div class="workflow__step-content">
+                  <h4>Rapid Image Capture</h4>
+                  <p>The vision subsystem activates the CMOS camera bus and acquires JPEG-compressed framebuffers in sub-second time.</p>
+                </div>
+              </div>
+
+              <div class="workflow__step">
+                <div class="workflow__step-num">3</div>
+                <div class="workflow__step-content">
+                  <h4>Environmental & Battery Sensing</h4>
+                  <p>Temperature and humidity are sampled via digital bus while an ADC circuit measures real-time battery cell voltage.</p>
+                </div>
+              </div>
+
+              <div class="workflow__step">
+                <div class="workflow__step-num">4</div>
+                <div class="workflow__step-content">
+                  <h4>Data Bundling & Local Storage</h4>
+                  <p>Sensor readings, timestamp, and device identifier are encoded and committed alongside the image to the local SD storage.</p>
+                </div>
+              </div>
+
+              <div class="workflow__step">
+                <div class="workflow__step-num">5</div>
+                <div class="workflow__step-content">
+                  <h4>LoRa Telemetry & Re-Sleep</h4>
+                  <p>A compact telemetry payload is transmitted via LoRa to the base station, and the node returns to micro-amp sleep mode.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Architectural Layers</h3>
+            
+            <div class="card" style="margin-bottom: 1rem;">
+              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="ri-sensor-line"></i> 1. Perception Layer (Sensors)
+              </h4>
+              <p class="card__description">
+                Dual-element PIR motion detector, CMOS image sensor, calibrated ambient temperature & relative humidity sensor, and battery voltage divider.
+              </p>
+            </div>
+
+            <div class="card" style="margin-bottom: 1rem;">
+              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="ri-cpu-fill"></i> 2. Embedded & Edge Layer
+              </h4>
+              <p class="card__description">
+                Low-power microcontroller unit, FreeRTOS event management, DMA-assisted camera pipeline, and optimized TinyML classification runtime.
+              </p>
+            </div>
+
+            <div class="card" style="margin-bottom: 1rem;">
+              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="ri-wifi-line"></i> 3. Telemetry & Transport Layer
+              </h4>
+              <p class="card__description">
+                Sub-GHz LoRa modulation (SX127x/SX126x) operating in regional ISM band with error checking and heartbeat pinging.
+              </p>
+            </div>
+
+            <div class="card">
+              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="ri-dashboard-3-line"></i> 4. Application & Gateway Layer
+              </h4>
+              <p class="card__description">
+                Base-station gateway receiving node packets, cloud ingestion pipeline, and ecological telemetry dashboard for conservation scientists.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. HARDWARE AND SOFTWARE DESIGN ==================== -->
+    <section class="section" id="design">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">Engineering Details</span>
+          <h2 class="section__title">Hardware & Software Design</h2>
+        </div>
+        <p class="section__description">
+          System specifications detailing component selection, energy budgets, firmware states, and telemetry schemas.
+        </p>
+
+        <!-- Tab Controls -->
+        <div class="tabs__header">
+          <button class="tab__button active" data-target="hardware-tab">
+            <i class="ri-hardware-line"></i> Hardware Specifications
+          </button>
+          <button class="tab__button" data-target="software-tab">
+            <i class="ri-code-s-slash-line"></i> Software Architecture
+          </button>
+        </div>
+
+        <!-- Hardware Tab Content -->
+        <div class="tab__content active" id="hardware-tab">
+          <div class="table__responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Subsystem</th>
+                  <th>Component / Module</th>
+                  <th>Functional Role</th>
+                  <th>Technical Specifications</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Main Controller</strong></td>
+                  <td>Low-Power Embedded MCU / SoC</td>
+                  <td>Coordinates peripherals, image acquisition & logging</td>
+                  <td>Deep sleep &lt; 50µA, fast wake-up (&lt; 20ms), 240MHz dual-core</td>
+                </tr>
+                <tr>
+                  <td><strong>Vision Module</strong></td>
+                  <td>CMOS Camera (OV2640 / OV5640)</td>
+                  <td>Captures JPEG frames upon trigger</td>
+                  <td>Configurable resolution up to UXGA (1600x1200), low-light mode</td>
+                </tr>
+                <tr>
+                  <td><strong>Motion Detection</strong></td>
+                  <td>Passive Infrared (PIR) Sensor</td>
+                  <td>Detects animal thermal displacement</td>
+                  <td>Adjustable sensitivity, 100° cone angle, 5-7 meter detection range</td>
+                </tr>
+                <tr>
+                  <td><strong>Climatic Sensing</strong></td>
+                  <td>Digital Temp & Humidity (DHT22 / SHT3x)</td>
+                  <td>Logs micro-climate variables</td>
+                  <td>Temp: -40 to 80°C (±0.3°C), Humidity: 0-100% RH (±2% RH)</td>
+                </tr>
+                <tr>
+                  <td><strong>Local Storage</strong></td>
+                  <td>MicroSD Card Interface</td>
+                  <td>Stores images and CSV telemetry registers</td>
+                  <td>FAT32 filesystem, SPI/SDIO high-speed bus</td>
+                </tr>
+                <tr>
+                  <td><strong>Power Subsystem</strong></td>
+                  <td>Li-ion 18650 Pack + Solar MPPT Controller</td>
+                  <td>Maintains node autonomous field operation</td>
+                  <td>3.7V 3000mAh cells, 5V/6V solar input, reverse current protection</td>
+                </tr>
+                <tr>
+                  <td><strong>Telemetry Radio</strong></td>
+                  <td>LoRa Transceiver Module (SX1278 / SX1262)</td>
+                  <td>Long-range wireless packet broadcasting</td>
+                  <td>433/868/915 MHz, +20 dBm PA, link budget up to 148 dB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Software Tab Content -->
+        <div class="tab__content" id="software-tab">
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+            <div class="card">
+              <h3 class="card__title" style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="ri-flow-chart"></i> Firmware State Transition
+              </h3>
+              <p class="card__description" style="margin-bottom: 0.75rem;">
+                Event-driven state machine ensuring optimal sleep duty cycles:
+              </p>
+              <div class="code__box">
+[STATE 0: DEEP SLEEP]
+  - Disable high-draw peripheral power rails
+  - Configure external PIR GPIO interrupt & RTC timer
+  - Current consumption: &lt; 50 µA
+
+[STATE 1: WAKE & VALIDATE]
+  - Woken by: PIR Interrupt or RTC Periodic Ping
+  - Check battery voltage & threshold integrity
+
+[STATE 2: SENSE & CAPTURE]
+  - Power up CMOS sensor rail
+  - Trigger camera capture & compress JPEG
+  - Read temperature & relative humidity via digital bus
+  - Sample battery ADC voltage divider
+
+[STATE 3: COMMIT TO DISK]
+  - Mount SD card & write /images/NODE01_TIMESTAMP.jpg
+  - Append telemetry record to telemetry_log.csv
+  - Power down camera rail
+
+[STATE 4: TELEMETRY DISPATCH]
+  - Construct compact binary LoRa packet
+  - Transmit beacon to central receiver
+  - Re-arm PIR interrupt & transition back to [STATE 0]
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title" style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="ri-file-code-line"></i> Telemetry Packet Schema
+              </h3>
+              <p class="card__description" style="margin-bottom: 0.75rem;">
+                Standardized data format logged to disk and summarized over LoRa:
+              </p>
+              <div class="code__box">
+{
+  "node_id": "NETH-01-FOREST",
+  "timestamp_utc": "2026-10-18T17:45:00Z",
+  "trigger": "PIR_MOTION",
+  "environment": {
+    "temperature_c": 24.8,
+    "humidity_pct": 78.4
+  },
+  "power": {
+    "battery_mv": 3950,
+    "battery_pct": 87,
+    "solar_mv": 5120
+  },
+  "image": {
+    "filename": "IMG_20261018_174500.JPG",
+    "resolution": "UXGA"
+  },
+  "edge_ai": {
+    "classified": true,
+    "label": "wildlife",
+    "confidence": 0.91
+  }
+}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. TESTING SECTION ==================== -->
+    <section class="section" id="testing" style="background-color: var(--body-color);">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">Verification & Benchmarks</span>
+          <h2 class="section__title">Testing & Evaluation</h2>
+        </div>
+        <p class="section__description">
+          Evaluation criteria ensuring hardware reliability, trigger timeliness, sensor precision, and power longevity.
+        </p>
+
+        <div class="table__responsive" style="margin-bottom: 3rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>Evaluation Area</th>
+                <th>Target Engineering Benchmark</th>
+                <th>Measurement Protocol</th>
+                <th>Milestone Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Camera Trigger Latency</strong></td>
+                <td>&lt; 800 ms from motion detection to frame capture</td>
+                <td>Optical trigger flash timing benchmarked with digital oscilloscope</td>
+                <td><span class="status-badge status-badge--warning">In Progress</span></td>
+              </tr>
+              <tr>
+                <td><strong>Sensor Accuracy</strong></td>
+                <td>Temperature: ±0.4°C | Humidity: ±3% RH</td>
+                <td>Cross-referenced against calibrated meteorological reference chamber</td>
+                <td><span class="status-badge status-badge--info">Planned</span></td>
+              </tr>
+              <tr>
+                <td><strong>Power Profile</strong></td>
+                <td>Sleep: &lt; 50 µA | Active peak: &lt; 180 mA</td>
+                <td>Current profiling with precision digital multimeter and power analyzer</td>
+                <td><span class="status-badge status-badge--warning">In Progress</span></td>
+              </tr>
+              <tr>
+                <td><strong>Data Synchronization</strong></td>
+                <td>100% correlation between image & sensor record</td>
+                <td>Continuous simulated trigger test over 72 uninterrupted hours</td>
+                <td><span class="status-badge status-badge--info">Planned</span></td>
+              </tr>
+              <tr>
+                <td><strong>LoRa Telemetry Range</strong></td>
+                <td>Packet delivery rate &gt; 95% at 2+ km</td>
+                <td>Field trials across line-of-sight and dense canopy environments</td>
+                <td><span class="status-badge status-badge--info">Planned</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Roadmap -->
+        <div class="section__title-center">
+          <span class="section__subtitle">Progress</span>
+          <h3 class="section__title">Development Roadmap</h3>
+        </div>
+
+        <div class="roadmap__container grid">
+          <div class="card">
+            <span class="status-badge status-badge--success">Phase 1: Completed</span>
+            <h4 class="card__title">Research & Requirements</h4>
+            <p class="card__description">
+              Literature review on camera traps, requirement analysis, power budget estimation, and system architecture blueprint.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="status-badge status-badge--warning">Phase 2: In Progress</span>
+            <h4 class="card__title">Sensor & Camera Breadboarding</h4>
+            <p class="card__description">
+              Interfacing PIR sensor with hardware interrupts, camera bus initialization, and environmental sensor driver validation.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="status-badge status-badge--info">Phase 3: Upcoming</span>
+            <h4 class="card__title">Deep-Sleep & Storage Integration</h4>
+            <p class="card__description">
+              Implementing low-power sleep transitions, SD card FAT32 journaling, and solar battery charging circuitry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. BLOG SECTION ==================== -->
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">Chronicles</span>
+          <h2 class="section__title">Project Blog & Notes</h2>
+        </div>
+        <p class="section__description">
+          Technical insights, development updates, and engineering decisions from the team.
+        </p>
+
+        <div class="blog__container grid">
+          <article class="card blog__card">
+            <div>
+              <div class="blog__meta">
+                <span class="blog__tag">Milestone 1</span>
+                <span><i class="ri-calendar-line"></i> Oct 2026</span>
+                <span><i class="ri-time-line"></i> 5 min</span>
+              </div>
+              <h3 class="card__title">Project Kickoff & System Architecture Definition</h3>
+              <p class="card__description">
+                Formulated the technical problem statement, studied the shortcomings of traditional camera traps, and mapped out the cyber-physical architecture for NETH.
+              </p>
+            </div>
+          </article>
+
+          <article class="card blog__card">
+            <div>
+              <div class="blog__meta">
+                <span class="blog__tag">Hardware</span>
+                <span><i class="ri-calendar-line"></i> Oct 2026</span>
+                <span><i class="ri-time-line"></i> 4 min</span>
+              </div>
+              <h3 class="card__title">Motion Sensing Trade-Offs: PIR vs Microwave Radar</h3>
+              <p class="card__description">
+                A comparative study on energy consumption: evaluating why passive infrared sensors remain ideal for ultra-low-power wildlife deployments over radar.
+              </p>
+            </div>
+          </article>
+
+          <article class="card blog__card">
+            <div>
+              <div class="blog__meta">
+                <span class="blog__tag">Firmware</span>
+                <span><i class="ri-calendar-line"></i> Upcoming</span>
+                <span><i class="ri-time-line"></i> 6 min</span>
+              </div>
+              <h3 class="card__title">Safeguarding MicroSD Data Against Sudden Voltage Drops</h3>
+              <p class="card__description">
+                Designing file journaling and buffer flushing protocols to prevent file corruption during cold-night battery drops in the field.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. HOW TO USE SECTION ==================== -->
+    <section class="section" id="how-to-use" style="background-color: var(--body-color);">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">Deployment</span>
+          <h2 class="section__title">How to Use NETH</h2>
+        </div>
+        <p class="section__description">
+          Guidelines for setting up, mounting, and operating a NETH node in wildlife observation corridors.
+        </p>
+
+        <div class="steps__container grid">
+          <div class="card step__card">
+            <div class="step__number">1</div>
+            <h4 class="card__title">Preparation</h4>
+            <p class="card__description">Insert a formatted FAT32 MicroSD card. Ensure rechargeable lithium cells are charged and solar panel surfaces are clear.</p>
+          </div>
+
+          <div class="card step__card">
+            <div class="step__number">2</div>
+            <h4 class="card__title">Mounting</h4>
+            <p class="card__description">Attach the weatherproof node enclosure to a tree or stake 0.5–1.5m above ground level angled toward active wildlife tracks.</p>
+          </div>
+
+          <div class="card step__card">
+            <div class="step__number">3</div>
+            <h4 class="card__title">Diagnostic Check</h4>
+            <p class="card__description">Power on the node. The diagnostic indicator flashes green to confirm camera, sensors, and SD card are healthy before deep sleep.</p>
+          </div>
+
+          <div class="card step__card">
+            <div class="step__number">4</div>
+            <h4 class="card__title">Data Retrieval</h4>
+            <p class="card__description">Retrieve logged high-res images from the SD card periodically, or monitor continuous detection digests over the LoRa receiver.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title" style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="ri-settings-4-line"></i> Field Configuration Template (<code>neth_config.ini</code>)
+          </h3>
+          <p class="card__description" style="margin-bottom: 0.75rem;">
+            Placed on the SD card root to easily adjust operational parameters without reflashing firmware:
+          </p>
+          <div class="code__box">
+[node_settings]
+node_id = NETH-NODE-01
+capture_resolution = UXGA        ; Options: QVGA, VGA, SVGA, UXGA
+burst_count = 3                  ; Frames to capture per trigger
+pir_cooldown_seconds = 10        ; Prevent redundant re-triggering
+deep_sleep_enabled = true        ; Maximize battery runtime
+lora_frequency_mhz = 868.1       ; ISM band frequency
+heartbeat_interval_hours = 6     ; Periodic telemetry ping interval
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. TEAM SECTION ==================== -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">The Team</span>
+          <h2 class="section__title">Project Contributors</h2>
+        </div>
+        <p class="section__description">
+          Undergraduate Engineers from the Department of Computer Engineering, Faculty of Engineering, University of Peradeniya.
+        </p>
+
+        <div class="team__container grid">
+          <!-- Bhagya Karunanayake -->
+          <div class="team__card">
+            <div class="team__avatar">BK</div>
+            <h3 class="team__name">Bhagya Karunanayake</h3>
+            <div class="team__enum">E/22/184</div>
+            <div class="team__role">Embedded Systems & Firmware</div>
+            <div class="team__socials">
+              <a href="mailto:e22184@eng.pdn.ac.lk" class="team__social-link" title="Email"><i class="ri-mail-line"></i></a>
+              <a href="https://www.linkedin.com/in/bhagya-karunanayake-b52085270" target="_blank" rel="noopener noreferrer" class="team__social-link" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            </div>
+          </div>
+
+          <!-- Imaadh Ifthikar -->
+          <div class="team__card">
+            <div class="team__avatar">II</div>
+            <h3 class="team__name">Imaadh Ifthikar</h3>
+            <div class="team__enum">E/22/151</div>
+            <div class="team__role">System Architecture & Sensors</div>
+            <div class="team__socials">
+              <a href="mailto:e22151@eng.pdn.ac.lk" class="team__social-link" title="Email"><i class="ri-mail-line"></i></a>
+              <a href="https://www.linkedin.com/in/imaadh-ifthikar-the-computer-engineer" target="_blank" rel="noopener noreferrer" class="team__social-link" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            </div>
+          </div>
+
+          <!-- Daniru Chandrawansha -->
+          <div class="team__card">
+            <div class="team__avatar">DC</div>
+            <h3 class="team__name">Daniru Chandrawansha</h3>
+            <div class="team__enum">E/22/056</div>
+            <div class="team__role">Hardware & Power Optimization</div>
+            <div class="team__socials">
+              <a href="mailto:e22056@eng.pdn.ac.lk" class="team__social-link" title="Email"><i class="ri-mail-line"></i></a>
+              <a href="https://www.linkedin.com/in/danirudinsara" target="_blank" rel="noopener noreferrer" class="team__social-link" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            </div>
+          </div>
+
+          <!-- Didulana Lokugamage -->
+          <div class="team__card">
+            <div class="team__avatar">DL</div>
+            <h3 class="team__name">Didulana Lokugamage</h3>
+            <div class="team__enum">E/22/214</div>
+            <div class="team__role">Telemetry & Software Integration</div>
+            <div class="team__socials">
+              <a href="mailto:e22214@eng.pdn.ac.lk" class="team__social-link" title="Email"><i class="ri-mail-line"></i></a>
+              <a href="https://www.linkedin.com/in/didulanalokugamage" target="_blank" rel="noopener noreferrer" class="team__social-link" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supervisor -->
+        <div class="supervisor__card">
+          <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <i class="ri-user-star-line" style="color: var(--first-color);"></i> Academic Supervisor
+          </h4>
+          <p style="color: var(--first-color); font-weight: 600; font-size: 1.05rem;">Ms. Yasodha Vimukthi</p>
+          <p style="color: var(--text-color); font-size: var(--small-font-size); margin-top: 0.25rem;">
+            Department of Computer Engineering, University of Peradeniya • 
+            <a href="mailto:yasodhav@eng.pdn.ac.lk" style="color: var(--first-color); font-weight: 500;">yasodhav@eng.pdn.ac.lk</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. BUDGET SECTION ==================== -->
+    <section class="section" id="budget" style="background-color: var(--body-color);">
+      <div class="container">
+        <div class="section__title-center">
+          <span class="section__subtitle">Financial Planning</span>
+          <h2 class="section__title">Project Budget</h2>
+        </div>
+        <p class="section__description">
+          Estimated bill of materials (BOM) and component acquisition planning for the NETH prototype.
+        </p>
+
+        <div class="budget__stats grid">
+          <div class="budget__stat-card">
+            <div class="budget__stat-value">9 Items</div>
+            <div class="budget__stat-label">Component Types</div>
+          </div>
+          <div class="budget__stat-card">
+            <div class="budget__stat-value">LKR 28,500</div>
+            <div class="budget__stat-label">Estimated Prototype Cost</div>
+          </div>
+          <div class="budget__stat-card">
+            <div class="budget__stat-value">CO3060</div>
+            <div class="budget__stat-label">Course Allocation</div>
+          </div>
+        </div>
+
+        <div class="table__responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Component / Description</th>
+                <th>Quantity</th>
+                <th>Unit Cost (LKR)</th>
+                <th>Total Cost (LKR)</th>
+                <th>Acquisition Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Microcontroller & Camera Development Board (ESP32-CAM)</td>
+                <td>2</td>
+                <td>2,800 LKR</td>
+                <td>5,600 LKR</td>
+                <td><span class="status-badge status-badge--success">Procured</span></td>
+              </tr>
+              <tr>
+                <td>Passive Infrared (PIR) Motion Detection Sensor (HC-SR501)</td>
+                <td>3</td>
+                <td>450 LKR</td>
+                <td>1,350 LKR</td>
+                <td><span class="status-badge status-badge--success">Procured</span></td>
+              </tr>
+              <tr>
+                <td>Digital Temperature & Humidity Sensor (DHT22 / SHT30)</td>
+                <td>2</td>
+                <td>1,200 LKR</td>
+                <td>2,400 LKR</td>
+                <td><span class="status-badge status-badge--success">Procured</span></td>
+              </tr>
+              <tr>
+                <td>High-Endurance MicroSD Card (32GB Class 10)</td>
+                <td>2</td>
+                <td>1,800 LKR</td>
+                <td>3,600 LKR</td>
+                <td><span class="status-badge status-badge--success">Procured</span></td>
+              </tr>
+              <tr>
+                <td>LoRa Transceiver Radio Module (SX1278 433MHz)</td>
+                <td>2</td>
+                <td>2,500 LKR</td>
+                <td>5,000 LKR</td>
+                <td><span class="status-badge status-badge--info">Planned</span></td>
+              </tr>
+              <tr>
+                <td>High-Capacity 18650 Li-ion Batteries (3.7V 3000mAh)</td>
+                <td>4</td>
+                <td>950 LKR</td>
+                <td>3,800 LKR</td>
+                <td><span class="status-badge status-badge--success">Procured</span></td>
+              </tr>
+              <tr>
+                <td>Solar Panel with Charging Controller Module (5V/6V MPPT)</td>
+                <td>1</td>
+                <td>3,200 LKR</td>
+                <td>3,200 LKR</td>
+                <td><span class="status-badge status-badge--info">Planned</span></td>
+              </tr>
+              <tr>
+                <td>IP66 Weatherproof Field Enclosure & Brackets</td>
+                <td>1</td>
+                <td>2,200 LKR</td>
+                <td>2,200 LKR</td>
+                <td><span class="status-badge status-badge--info">Planned</span></td>
+              </tr>
+              <tr>
+                <td>Power Management, Regulators & Passive Components</td>
+                <td>1 Set</td>
+                <td>1,350 LKR</td>
+                <td>1,350 LKR</td>
+                <td><span class="status-badge status-badge--success">Procured</span></td>
+              </tr>
+              <tr style="font-weight: 700;">
+                <td colspan="3" style="text-align: right;">Total Estimated Budget:</td>
+                <td colspan="2" style="color: var(--first-color); font-size: 1.1rem;">28,500 LKR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SCROLL UP BUTTON ==================== -->
+  <a href="#" class="scrollup" id="scroll-up" title="Scroll to top">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer__container container grid">
+      <div>
+        <a href="#home" class="nav__logo" style="margin-bottom: 0.85rem;">
+          <img src="assets/images/neth-logo.png" alt="NETH Logo" class="nav__logo-img" />
+          <span>NETH</span>
+        </a>
+        <p style="font-size: var(--small-font-size); color: var(--text-color); max-width: 420px; line-height: 1.6;">
+          Networked Ecological Telemetry Hub — A cyber-physical wildlife observation platform built for CO3060 Computer Systems Design Project at the University of Peradeniya.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer__title">Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="#home" class="footer__link"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+          <li><a href="#about" class="footer__link"><i class="ri-arrow-right-s-line"></i> About</a></li>
+          <li><a href="#architecture" class="footer__link"><i class="ri-arrow-right-s-line"></i> Solution Architecture</a></li>
+          <li><a href="#design" class="footer__link"><i class="ri-arrow-right-s-line"></i> Hardware & Software</a></li>
+          <li><a href="#testing" class="footer__link"><i class="ri-arrow-right-s-line"></i> Testing</a></li>
+          <li><a href="#blog" class="footer__link"><i class="ri-arrow-right-s-line"></i> Blog</a></li>
+          <li><a href="#how-to-use" class="footer__link"><i class="ri-arrow-right-s-line"></i> How to Use</a></li>
+          <li><a href="#team" class="footer__link"><i class="ri-arrow-right-s-line"></i> Team</a></li>
+          <li><a href="#budget" class="footer__link"><i class="ri-arrow-right-s-line"></i> Budget</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__title">External Links</h4>
+        <ul class="footer__links">
+          <li><a href="https://github.com/cepdnaclk/e22-3yp-NETH" target="_blank" rel="noopener noreferrer" class="footer__link"><i class="ri-github-fill"></i> GitHub Repository</a></li>
+          <li><a href="https://cepdnaclk.github.io/e22-3yp-NETH/" target="_blank" rel="noopener noreferrer" class="footer__link"><i class="ri-global-line"></i> Live Project Page</a></li>
+          <li><a href="http://www.ce.pdn.ac.lk/" target="_blank" rel="noopener noreferrer" class="footer__link"><i class="ri-building-line"></i> Department of Computer Engineering</a></li>
+          <li><a href="https://eng.pdn.ac.lk/" target="_blank" rel="noopener noreferrer" class="footer__link"><i class="ri-school-line"></i> Faculty of Engineering</a></li>
+          <li><a href="https://www.pdn.ac.lk/" target="_blank" rel="noopener noreferrer" class="footer__link"><i class="ri-community-line"></i> University of Peradeniya</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__copy container">
+      <div>
+        © <span id="year">2026</span> NETH Project. Released under the MIT License.
+      </div>
+      <div>
+        CO3060 Computer Systems Design Project
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
