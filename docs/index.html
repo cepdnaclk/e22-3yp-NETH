@@ -171,12 +171,15 @@
       <div class="container">
         <div class="section__title-center">
           <span class="section__subtitle">Project Foundation</span>
-          <h2 class="section__title">About NETH</h2>
+          <h2 class="section__title" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.65rem;">
+            About NETH
+            <img src="assets/images/neth-logo.png" alt="NETH Logo" class="about__logo-badge" />
+          </h2>
         </div>
 
         <div class="about__container grid" style="margin-bottom: 3.5rem;">
           <div class="about__img-wrapper">
-            <img src="data/thumbnail.jpg" alt="Wildlife Observation in Nature" class="about__img" />
+            <img src="assets/images/wildlife-telemetry-sample.jpg" alt="NETH Live Field Telemetry Capture with Environmental Overlay" class="about__img" />
           </div>
 
           <div class="about__data">
@@ -286,94 +289,65 @@
           A layered cyber-physical architecture engineered for ultra-low power consumption, deterministic sensing, and long-range telemetry.
         </p>
 
-        <div class="architecture__container grid">
-          <div>
-            <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Core Operational Workflow</h3>
-            <p style="margin-bottom: 1.5rem; font-size: var(--small-font-size);">
-              When an animal enters the node's surveillance zone, a low-latency hardware interrupt triggers the telemetry sequence:
+        <!-- Core Operational Workflow Diagram -->
+        <div class="workflow__diagram-card" style="margin-bottom: 3.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="ri-flow-chart" style="color: var(--first-color);"></i> Core Operational Workflow
+            </h3>
+            <a href="assets/images/neth-workflow.png" target="_blank" rel="noopener noreferrer" class="manual">
+              <i class="ri-zoom-in-line"></i> View Full-Size Workflow ↗
+            </a>
+          </div>
+          <p style="margin-bottom: 1.25rem; font-size: var(--small-font-size); color: var(--text-color);">
+            Comprehensive 8-stage execution pipeline covering on-node sensing (Sleep, PIR Trigger, Sensor Read, Image Capture, SD Storage), Edge AI inference, LoRa mesh broadcasting, and remote cloud dashboard monitoring:
+          </p>
+          <a href="assets/images/neth-workflow.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/neth-workflow.png" alt="NETH Core Operational Workflow Diagram" class="workflow__img" />
+          </a>
+        </div>
+
+        <!-- Architectural Layers -->
+        <div class="section__title-center" style="margin-bottom: 2rem;">
+          <span class="section__subtitle">System Stack</span>
+          <h3 class="section__title">Architectural Layers</h3>
+        </div>
+
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          <div class="card">
+            <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="ri-sensor-line"></i> 1. Perception Layer
+            </h4>
+            <p class="card__description">
+              Dual-element PIR motion detector, CMOS image sensor, calibrated ambient temperature & relative humidity sensor, and battery voltage divider.
             </p>
-
-            <div class="workflow__steps">
-              <div class="workflow__step">
-                <div class="workflow__step-num">1</div>
-                <div class="workflow__step-content">
-                  <h4>Motion Detection & Wake-Up</h4>
-                  <p>PIR sensor detects displacement in infrared radiation, instantly generating a hardware interrupt to wake the MCU from deep sleep.</p>
-                </div>
-              </div>
-
-              <div class="workflow__step">
-                <div class="workflow__step-num">2</div>
-                <div class="workflow__step-content">
-                  <h4>Rapid Image Capture</h4>
-                  <p>The vision subsystem activates the CMOS camera bus and acquires JPEG-compressed framebuffers in sub-second time.</p>
-                </div>
-              </div>
-
-              <div class="workflow__step">
-                <div class="workflow__step-num">3</div>
-                <div class="workflow__step-content">
-                  <h4>Environmental & Battery Sensing</h4>
-                  <p>Temperature and humidity are sampled via digital bus while an ADC circuit measures real-time battery cell voltage.</p>
-                </div>
-              </div>
-
-              <div class="workflow__step">
-                <div class="workflow__step-num">4</div>
-                <div class="workflow__step-content">
-                  <h4>Data Bundling & Local Storage</h4>
-                  <p>Sensor readings, timestamp, and device identifier are encoded and committed alongside the image to the local SD storage.</p>
-                </div>
-              </div>
-
-              <div class="workflow__step">
-                <div class="workflow__step-num">5</div>
-                <div class="workflow__step-content">
-                  <h4>LoRa Telemetry & Re-Sleep</h4>
-                  <p>A compact telemetry payload is transmitted via LoRa to the base station, and the node returns to micro-amp sleep mode.</p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div>
-            <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Architectural Layers</h3>
-            
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i class="ri-sensor-line"></i> 1. Perception Layer (Sensors)
-              </h4>
-              <p class="card__description">
-                Dual-element PIR motion detector, CMOS image sensor, calibrated ambient temperature & relative humidity sensor, and battery voltage divider.
-              </p>
-            </div>
+          <div class="card">
+            <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="ri-cpu-fill"></i> 2. Embedded & Edge Layer
+            </h4>
+            <p class="card__description">
+              Low-power microcontroller unit, FreeRTOS event management, DMA-assisted camera pipeline, and optimized TinyML classification runtime.
+            </p>
+          </div>
 
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i class="ri-cpu-fill"></i> 2. Embedded & Edge Layer
-              </h4>
-              <p class="card__description">
-                Low-power microcontroller unit, FreeRTOS event management, DMA-assisted camera pipeline, and optimized TinyML classification runtime.
-              </p>
-            </div>
+          <div class="card">
+            <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="ri-wifi-line"></i> 3. Telemetry & Transport Layer
+            </h4>
+            <p class="card__description">
+              Sub-GHz LoRa modulation (SX127x/SX126x) operating in regional ISM band with error checking and heartbeat pinging.
+            </p>
+          </div>
 
-            <div class="card" style="margin-bottom: 1rem;">
-              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i class="ri-wifi-line"></i> 3. Telemetry & Transport Layer
-              </h4>
-              <p class="card__description">
-                Sub-GHz LoRa modulation (SX127x/SX126x) operating in regional ISM band with error checking and heartbeat pinging.
-              </p>
-            </div>
-
-            <div class="card">
-              <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i class="ri-dashboard-3-line"></i> 4. Application & Gateway Layer
-              </h4>
-              <p class="card__description">
-                Base-station gateway receiving node packets, cloud ingestion pipeline, and ecological telemetry dashboard for conservation scientists.
-              </p>
-            </div>
+          <div class="card">
+            <h4 style="color: var(--first-color); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="ri-dashboard-3-line"></i> 4. Application & Gateway Layer
+            </h4>
+            <p class="card__description">
+              Base-station gateway receiving node packets, cloud ingestion pipeline, and ecological telemetry dashboard for conservation scientists.
+            </p>
           </div>
         </div>
       </div>
@@ -755,7 +729,9 @@ heartbeat_interval_hours = 6     ; Periodic telemetry ping interval
         <div class="team__container grid">
           <!-- Bhagya Karunanayake -->
           <div class="team__card">
-            <div class="team__avatar">BK</div>
+            <div class="team__img-wrapper">
+              <img src="assets/images/Bhagya%20Karunanayake.jpeg" alt="Bhagya Karunanayake" class="team__img" />
+            </div>
             <h3 class="team__name">Bhagya Karunanayake</h3>
             <div class="team__enum">E/22/184</div>
             <div class="team__role">Embedded Systems & Firmware</div>
@@ -767,7 +743,9 @@ heartbeat_interval_hours = 6     ; Periodic telemetry ping interval
 
           <!-- Imaadh Ifthikar -->
           <div class="team__card">
-            <div class="team__avatar">II</div>
+            <div class="team__img-wrapper">
+              <img src="assets/images/Imaadh%20Ifthikar.jpg" alt="Imaadh Ifthikar" class="team__img" />
+            </div>
             <h3 class="team__name">Imaadh Ifthikar</h3>
             <div class="team__enum">E/22/151</div>
             <div class="team__role">System Architecture & Sensors</div>
@@ -779,7 +757,9 @@ heartbeat_interval_hours = 6     ; Periodic telemetry ping interval
 
           <!-- Daniru Chandrawansha -->
           <div class="team__card">
-            <div class="team__avatar">DC</div>
+            <div class="team__img-wrapper">
+              <img src="assets/images/Daniru.jpg" alt="Daniru Chandrawansha" class="team__img" />
+            </div>
             <h3 class="team__name">Daniru Chandrawansha</h3>
             <div class="team__enum">E/22/056</div>
             <div class="team__role">Hardware & Power Optimization</div>
@@ -791,7 +771,9 @@ heartbeat_interval_hours = 6     ; Periodic telemetry ping interval
 
           <!-- Didulana Lokugamage -->
           <div class="team__card">
-            <div class="team__avatar">DL</div>
+            <div class="team__img-wrapper">
+              <img src="assets/images/Didulana.jpg" alt="Didulana Lokugamage" class="team__img" />
+            </div>
             <h3 class="team__name">Didulana Lokugamage</h3>
             <div class="team__enum">E/22/214</div>
             <div class="team__role">Telemetry & Software Integration</div>
@@ -829,12 +811,12 @@ heartbeat_interval_hours = 6     ; Periodic telemetry ping interval
 
         <div class="budget__stats grid">
           <div class="budget__stat-card">
-            <div class="budget__stat-value">9 Items</div>
-            <div class="budget__stat-label">Component Types</div>
+            <div class="budget__stat-value">21 Items</div>
+            <div class="budget__stat-label">Component Categories</div>
           </div>
           <div class="budget__stat-card">
-            <div class="budget__stat-value">LKR 28,500</div>
-            <div class="budget__stat-label">Estimated Prototype Cost</div>
+            <div class="budget__stat-value">LKR 43,400</div>
+            <div class="budget__stat-label">Total Proposed Budget</div>
           </div>
           <div class="budget__stat-card">
             <div class="budget__stat-value">CO3060</div>
@@ -842,87 +824,19 @@ heartbeat_interval_hours = 6     ; Periodic telemetry ping interval
           </div>
         </div>
 
-        <div class="table__responsive">
-          <table>
-            <thead>
-              <tr>
-                <th>Component / Description</th>
-                <th>Quantity</th>
-                <th>Unit Cost (LKR)</th>
-                <th>Total Cost (LKR)</th>
-                <th>Acquisition Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Microcontroller & Camera Development Board (ESP32-CAM)</td>
-                <td>2</td>
-                <td>2,800 LKR</td>
-                <td>5,600 LKR</td>
-                <td><span class="status-badge status-badge--success">Procured</span></td>
-              </tr>
-              <tr>
-                <td>Passive Infrared (PIR) Motion Detection Sensor (HC-SR501)</td>
-                <td>3</td>
-                <td>450 LKR</td>
-                <td>1,350 LKR</td>
-                <td><span class="status-badge status-badge--success">Procured</span></td>
-              </tr>
-              <tr>
-                <td>Digital Temperature & Humidity Sensor (DHT22 / SHT30)</td>
-                <td>2</td>
-                <td>1,200 LKR</td>
-                <td>2,400 LKR</td>
-                <td><span class="status-badge status-badge--success">Procured</span></td>
-              </tr>
-              <tr>
-                <td>High-Endurance MicroSD Card (32GB Class 10)</td>
-                <td>2</td>
-                <td>1,800 LKR</td>
-                <td>3,600 LKR</td>
-                <td><span class="status-badge status-badge--success">Procured</span></td>
-              </tr>
-              <tr>
-                <td>LoRa Transceiver Radio Module (SX1278 433MHz)</td>
-                <td>2</td>
-                <td>2,500 LKR</td>
-                <td>5,000 LKR</td>
-                <td><span class="status-badge status-badge--info">Planned</span></td>
-              </tr>
-              <tr>
-                <td>High-Capacity 18650 Li-ion Batteries (3.7V 3000mAh)</td>
-                <td>4</td>
-                <td>950 LKR</td>
-                <td>3,800 LKR</td>
-                <td><span class="status-badge status-badge--success">Procured</span></td>
-              </tr>
-              <tr>
-                <td>Solar Panel with Charging Controller Module (5V/6V MPPT)</td>
-                <td>1</td>
-                <td>3,200 LKR</td>
-                <td>3,200 LKR</td>
-                <td><span class="status-badge status-badge--info">Planned</span></td>
-              </tr>
-              <tr>
-                <td>IP66 Weatherproof Field Enclosure & Brackets</td>
-                <td>1</td>
-                <td>2,200 LKR</td>
-                <td>2,200 LKR</td>
-                <td><span class="status-badge status-badge--info">Planned</span></td>
-              </tr>
-              <tr>
-                <td>Power Management, Regulators & Passive Components</td>
-                <td>1 Set</td>
-                <td>1,350 LKR</td>
-                <td>1,350 LKR</td>
-                <td><span class="status-badge status-badge--success">Procured</span></td>
-              </tr>
-              <tr style="font-weight: 700;">
-                <td colspan="3" style="text-align: right;">Total Estimated Budget:</td>
-                <td colspan="2" style="color: var(--first-color); font-size: 1.1rem;">28,500 LKR</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Enlarged Budget Sheet View -->
+        <div class="budget__sheet-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="ri-file-list-3-line" style="color: var(--first-color);"></i> Component Budget Sheet Breakdown
+            </h3>
+            <a href="assets/images/budget-breakdown.png" target="_blank" rel="noopener noreferrer" class="manual">
+              <i class="ri-zoom-in-line"></i> View Full-Size Image ↗
+            </a>
+          </div>
+          <a href="assets/images/budget-breakdown.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/budget-breakdown.png" alt="NETH Proposed Budget Breakdown" class="budget__sheet-img" />
+          </a>
         </div>
       </div>
     </section>
